@@ -9,7 +9,17 @@
     <body>
         <div class="container">
             <header>
-                <h1>HEADER CHANGE</h1>
+                <img src="img/logo.jpg" alt="it's logotype">
+                <h1 class="title">HEADER CHANGE</h1>
+                
+                <div class="login">
+                    <form method="post" class="auth-form">
+                        <input name="login" type="text" placeholder="Логин" />
+                        <input name="pass" type="password" placeholder="Пароль" />
+                        <input value="Вход" type="submit" />
+                    </form>
+                </div>
+                
             </header>
             
             <nav>
@@ -28,8 +38,9 @@
                     require 'data/main.php';
                 }
                 echo '<article>';
+                //include ('system/auth_form.php');
                 echo $header;
-                echo $bred;
+                echo $text;
                 echo '</article>';
             ?>
             

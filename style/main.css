@@ -7,9 +7,7 @@ div.container {
 
 header, footer {
     background: gainsboro; 
-    text-align: center;
     clear: left;
-    padding: 1em;
 }
 
 header {
@@ -17,6 +15,8 @@ header {
 }
 
 footer {
+    text-align: center;
+    padding: 1em;
     border-top: 1px solid black;
 }
 
@@ -36,6 +36,23 @@ article {
     overflow: hidden;
 }
 
+img{
+    width: 168px;
+    height: 168px;
+    border: darkgray 2px solid;
+}
 
+h1, img {
+    vertical-align: middle;
+    display: inline-block;
+}
 
+title {
+    padding-left: 50px;
+}
 
+div.login {
+    display: inline-block;
+    float: right;
+    padding: 1em;
+}
