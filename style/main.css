@@ -1,0 +1,41 @@
+div.container {
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid black;
+    background: whitesmoke; 
+}
+
+header, footer {
+    background: gainsboro; 
+    text-align: center;
+    clear: left;
+    padding: 1em;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+
+footer {
+    border-top: 1px solid black;
+}
+
+nav {
+    padding: 1em;
+    background: whitesmoke; 
+    float: left;
+    max-width: 160px;
+    margin: 0;
+}
+
+article {
+    background: white;
+    margin-left: 170px;
+    border-left: 1px solid black;
+    padding: 1em;
+    overflow: hidden;
+}
+
+
+
+
