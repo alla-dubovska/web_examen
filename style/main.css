@@ -37,9 +37,8 @@ article {
 }
 
 img{
-    width: 168px;
-    height: 168px;
-    border: darkgray 2px solid;
+    width: 68px;
+    height: 68px;
 }
 
 h1, img {
@@ -51,7 +50,7 @@ title {
     padding-left: 50px;
 }
 
-div.login {
+div.login, div.logout {
     display: inline-block;
     float: right;
     padding: 1em;
