@@ -41,7 +41,7 @@ article {
     overflow: hidden;
 }
 
-img{
+img {
     width: 68px;
     height: 68px;
 }
@@ -59,4 +59,17 @@ div.login, div.logout {
     display: inline-block;
     float: right;
     padding: 1em;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+     border: 1px solid black;
+}
+
+img.done {
+    width: 24px;
+    height: 24px;
 }
