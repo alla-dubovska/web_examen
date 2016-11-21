@@ -29,8 +29,6 @@
                     include 'data/' . $file_name;
                 } else {
                     require 'data/page1.php';
-                    echo $header;
-                    echo $text;
                 }
                 echo '</article>';
             ?>

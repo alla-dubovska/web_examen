@@ -46,7 +46,7 @@ img {
     height: 68px;
 }
 
-h1, img {
+h1.title, img {
     vertical-align: middle;
     display: inline-block;
 }
