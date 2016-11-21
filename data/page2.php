@@ -39,7 +39,7 @@ if(!$_SESSION['role']) {
 <?php       
 $book = array();
 
-$q = "SELECT * FROM book WHERE user_id = \"" . $_SESSION['id'] . "\"";
+$q = "SELECT * FROM books WHERE user_id = \"" . $_SESSION['id'] . "\"";
 
 if($selected == 1) {
     $q = $q . ' AND is_read = 1';

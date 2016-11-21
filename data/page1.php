@@ -14,14 +14,20 @@ $text = ' <p>To change the visual style of a table you need to supply custom cel
 
 echo $header;
 echo $text;
+if(!$_SESSION['role']) {
+    echo '<h3>Pour ajouter un livre s\'il vous plaît ouvrir une session.</h3>';
+} else {
 ?>
 
 <form action="?route=new_book" method="post">
     <h1>Ajouter un nouveau livre</h1>
     <p>Le nom: <input name="name" type="text" required="required"/></p>
     <p>Le auteur: <input name="author" type="text" required="required"/></p>
-    <p>Le commentaire(peut être une référence à l'Internet): </p>
+    <p>Vous avez déjà lu ce livre? <input type="checkbox" name="is_read" value="no"></>
+    <p>Le commentaire (peut être une référence à l'Internet): </p>
         <p><textarea name="comm" type="text" cols="100" rows="5"></textarea></p>
     <input value="Ok" type="submit" />
 </form>
+<?php
+}
 

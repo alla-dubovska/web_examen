@@ -1,5 +1,5 @@
 <?php 
-$query = 'INSERT INTO user (`login`, `pass`, `role`, `name`) VALUES ("' . $_POST['login'] . ''
+$query = 'INSERT INTO users (`login`, `pass`, `role`, `name`) VALUES ("' . $_POST['login'] . ''
         . '", "' . $_POST['pass'] . '", "user", "' . $_POST['name'] . '");';
 
 $res = mysqli_query($link, $query);

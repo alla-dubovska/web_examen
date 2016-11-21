@@ -9,7 +9,7 @@ if(isset($_SESSION['role'])) {
         if(isset($user[$_POST['login']]) && $user[$_POST['login']]['pass'] == $_POST['pass']) {
             $_SESSION['role'] = $user[$_POST['login']]['role'];
             $_SESSION['user_name'] = $user[$_POST['login']]['user_name'];
-            $_SESSION['id'] = $user[$_POST['login']]['id'];
+            $_SESSION['id'] = $user[$_POST['login']]['id'];     
         }
     }
 }
