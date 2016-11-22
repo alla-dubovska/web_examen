@@ -3,6 +3,13 @@ if(!$_SESSION['role']) {
     echo '<h1>Mes livres</h1>';
     echo '<p>Pour utiliser le site, vous devez inscrire votre login et mot de passe.</p>';
 } else {
+    if(isset($_GET['mark_as_read'])) {
+        $query = "UPDATE books SET is_read = \"1\" WHERE id = \"" . $_GET['mark_as_read'] . "\";";
+        mysqli_query($link, $query);
+    } else if(isset($_GET['mark_as_unread'])) {
+        $query = "UPDATE books SET is_read = \"0\" WHERE id = \"" . $_GET['mark_as_unread'] . "\";";
+        mysqli_query($link, $query);
+    }
 ?> 
 <form method="post" action="?route=page2">
     <select name="type_form">
@@ -56,9 +63,9 @@ echo '<table><caption><h1>Mes livres</h1></caption>
                     <th>Le commentaire</th> </tr>';
 while ($row = mysqli_fetch_assoc($res)) {
     if($row[is_read]) {
-        echo "<tr><td class=\"done\"><img class=\"done\" src=\"img/ic_add_black_24dp_2x.png\" alt=\"done\"></td>";
+        echo "<tr><td class=\"done\"><a href='?route=page2&mark_as_unread=" . $row[id] . "'><img class=\"done\" src=\"img/ic_add_black_24dp_2x.png\" alt=\"done\"></a></td>";
     } else {
-        echo "<tr><td class=\"done\"><img class=\"done\" src=\"img/ic_remove_black_24dp_2x.png\" alt=\"done\"></td>";
+        echo "<tr><td class=\"done\"><a href='?route=page2&mark_as_read=" . $row[id] . "'><img class=\"done\" src=\"img/ic_remove_black_24dp_2x.png\" alt=\"is not read yet\"></a></td>";
     }
     echo "<td>" . $row['name'] . "</td>";
     echo "<td>" . $row['author'] . "</td>";
