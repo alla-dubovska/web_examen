@@ -1,21 +1,16 @@
 <?php
 $header = "<h1>Ma bibliothèque  ou comment faire facilement un catalogue de sa bibliothèque</h1>";
-$text = ' <p>To change the visual style of a table you need to supply custom cells for it to display. The custom cell can have different colors and control layouts.
-    The CellCustomTable example implements a UITableViewCell subclass that defines a custom layout of UILabels and a UIImage with different fonts and colors. The resulting cells look like this:
-</p>
-
-<p>To change the visual style of a table you need to supply custom cells for it to display. The custom cell can have different colors and control layouts.
-    The CellCustomTable example implements a UITableViewCell subclass that defines a custom layout of UILabels and a UIImage with different fonts and colors. The resulting cells look like this:
-</p>
-
-<p>To change the visual style of a table you need to supply custom cells for it to display. The custom cell can have different colors and control layouts.
-    The CellCustomTable example implements a UITableViewCell subclass that defines a custom layout of UILabels and a UIImage with different fonts and colors. The resulting cells look like this:
-</p>';
+$text = ' <p>Vous avez des dizaines de livres que vous voulez lire,et cette liste 
+    est mise à jour tous les jours? Vous ne voulez pas manquer un seul livre, et 
+    vous avez besoin d\'un moyen de stocker cette liste?</p>
+    <p> Alors, notre site web c\'est 
+    ce dont vous avez besoin. Sur ce site vous pouvez ajouter un nouveau livre, 
+    le modifier, marquer comme lu et laisser votre évaluation. </p>';
 
 echo $header;
 echo $text;
 if(!$_SESSION['role']) {
-    echo '<h3>Pour ajouter un livre s\'il vous plaît ouvrir une session.</h3>';
+    echo '<h3>Pour ajouter un livre, vous devez d\'abord vous enregistrer. </h3>';
 } else {
 ?>
 

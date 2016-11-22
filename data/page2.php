@@ -1,7 +1,7 @@
 <?php
 if(!$_SESSION['role']) {
     echo '<h1>Mes livres</h1>';
-    echo '<p>Please login first</p>';
+    echo '<p>Pour utiliser le site, vous devez inscrire votre login et mot de passe.</p>';
 } else {
 ?> 
 <form method="post" action="?route=page2">
